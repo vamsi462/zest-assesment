@@ -3,5 +3,4 @@
     npm start
 
 ### Libraries Used
-   
-   
+    react-chartjs-2

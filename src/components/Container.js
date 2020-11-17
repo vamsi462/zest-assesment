@@ -4,7 +4,7 @@ import DisplayRowData from "./DisplayRowData";
 
 const Container = () => {
   const [completeData, setCompleteData] = useState({});
-
+const [isError, setIsError] = useState(false);
   useEffect(() => {
     fetch(URL)
       .then(res => {
@@ -13,12 +13,16 @@ const Container = () => {
       .then(res => {
         //console.log(res.data.length)
         setCompleteData(res.data);
+      })
+      .catch((error) => {
+          setIsError(true)
+          console.log(error)
       });
   }, []);
   return (
     <div>
-      <table>
-        <tbody>
+            {isError && <div>Something went wrong ...</div>}
+      
           {Object.keys(completeData).length !== 0 ? (
             completeData.map((dataItem, index) => (
               <DisplayRowData
@@ -31,8 +35,7 @@ const Container = () => {
           ) : (
             <h3 data-text="It's loading…">It's loading…</h3>
           )}
-        </tbody>
-      </table>
+       
     </div>
   );
 };

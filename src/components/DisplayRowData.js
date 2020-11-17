@@ -14,6 +14,8 @@ const DisplayRowData = props => {
   }
   return (
     <React.Fragment>
+        <table>
+        <tbody>
       <tr>
         <td id='fea_col'>{props.feature}</td>
         <td id='desc_col'>{props.description}</td>
@@ -42,6 +44,8 @@ const DisplayRowData = props => {
           </tr>
         </div>
       ) : null}
+       </tbody>
+      </table>
     </React.Fragment>
   );
 };
