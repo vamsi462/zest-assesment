@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { URL } from '../api'
+import DisplayRowData from './DisplayRowData'
 
 const Container = () => {
     const[completeData, setCompleteData] = useState({})
@@ -15,10 +16,18 @@ const Container = () => {
             })
     },[])
     return (
-        <div>
-            {JSON.stringify(Object.keys(completeData))}
-        </div>
-    )
+      <div>
+        <table>
+          <tbody>
+            {Object.keys(completeData).length !== 0 ? (
+              completeData.map(dataItem => <DisplayRowData  feature={dataItem.feature} description={dataItem.description}/>)
+            ) : (
+              <h3 data-text="It's loading…">It's loading…</h3>
+            )}
+          </tbody>
+        </table>
+      </div>
+    );
 }
 
 export default Container
