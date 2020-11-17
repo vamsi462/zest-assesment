@@ -2,7 +2,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App"> 
+    <div className="App">
+      <p>Analysis on Fundamental Changes</p>
     </div>
   );
 } 
