@@ -1,5 +1,6 @@
 
 import React, {useState} from "react";
+import ChartDispaly from "./ChartDispaly";
 
 const DisplayRowData = props => {
     const [showChart, setShowChart] = useState(false);
@@ -35,6 +36,7 @@ const DisplayRowData = props => {
                   ))}
                 </select>
               </div>
+              <ChartDispaly chartData={props.data[currentKey]}/>
             </td>
           </tr>
         </div>
