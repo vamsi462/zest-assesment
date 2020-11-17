@@ -32,10 +32,11 @@ const DisplayRowData = props => {
               <div className='select-container'>
                 <select onChange={onKeyChange}>
                   {Object.keys(props.data).map(key => (
-                    <option value={key}>{key}</option>
+                    <option value={key}>{key}</option> //differeht metrics selection
                   ))}
                 </select>
               </div>
+              {/* chart item based on key change*/}
               <ChartDispaly chartData={props.data[currentKey]}/>
             </td>
           </tr>

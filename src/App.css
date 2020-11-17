@@ -52,7 +52,26 @@ select {
   text-align: center;
   -webkit-appearance: none;
 }
-/* .select-container {
+.select-container {
   position: relative;
   left: 90%
-} */
+}
+h3 {
+  position: relative;
+  color: rgba(0, 0, 0, .3);
+  font-size: 2em
+}
+h3::before{
+  content: attr(data-text);
+  position: absolute;
+  overflow: hidden;
+  max-width: 7em;
+  white-space: nowrap;
+  color: #3498db;
+  animation: loading 13s linear;
+}
+@keyframes loading {
+  0% {
+    max-width: 0;
+  }
+}
