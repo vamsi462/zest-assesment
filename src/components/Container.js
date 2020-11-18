@@ -4,7 +4,6 @@ import DisplayRowData from "./DisplayRowData";
 
 const Container = () => {
   const [completeData, setCompleteData] = useState({});
-const [isError, setIsError] = useState(false);
   useEffect(() => {
     fetch(URL)
       .then(res => {
@@ -15,9 +14,7 @@ const [isError, setIsError] = useState(false);
         setCompleteData(res.data);
       })
       .catch((error) => {
-          
-          setIsError(true)
-         
+        console.log(error)     
       });
   }, []);
   return (
