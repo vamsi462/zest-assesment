@@ -15,15 +15,13 @@ const [isError, setIsError] = useState(false);
         setCompleteData(res.data);
       })
       .catch((error) => {
-           console.log(error)
+          
           setIsError(true)
          
       });
   }, []);
   return (
     <div>
-        {isError && <div>Something went wrong ...</div>}
-      
           {Object.keys(completeData).length !== 0 ? (
             completeData.map((dataItem, index) => (
               <DisplayRowData
