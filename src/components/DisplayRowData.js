@@ -26,22 +26,20 @@ const DisplayRowData = props => {
           )}
         </td>
       </tr>
-      {showChart ? (
-        <div>
+      {showChart ? (        
           <tr>
             <td>
               <div className='select-container'>
                 <select onChange={onKeyChange}>
                   {Object.keys(props.data).map(key => (
-                    <option value={key}>{key}</option> //differeht metrics selection
+                    <option key={key} value={key}>{key}</option> //different metrics selection
                   ))}
                 </select>
               </div>
               {/* chart item based on key change*/}
-              <ChartDispaly chartData={props.data[currentKey]}/>
+              <ChartDispaly chartData={props.data[currentKey]}/> 
             </td>
           </tr>
-        </div>
       ) : null}
        </tbody>
       </table>

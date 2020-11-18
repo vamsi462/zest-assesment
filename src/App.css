@@ -1,37 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
 body {
- font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
-p{
+
+p {
   margin-left: 50px;
   color: #272727;
   font-weight: 600;
 }
-table{
+
+table {
   border-collapse: collapse;
   width: 73%;
   table-layout: fixed;
-  margin: auto
-}
-td{
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  margin: auto;
 }
 
-tr{
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 2px #ddd
+td {
+  padding: 8px;
+  text-align: left;
+  
 }
+
+tr {
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ddd
+}
+
 #fea_col {
   width: 31%;
   font-weight: 600;
   color: #272727;
 }
+
 #desc_col {
   width: 60%;
   color: #747474
 }
+
 tr td i {
   position: relative;
   left: 30px;
@@ -52,16 +59,20 @@ select {
   text-align: center;
   -webkit-appearance: none;
 }
+
 .select-container {
-  position: relative;
-  left: 90%
+
+  position:absolute;
+  left: 77%
 }
+
 h3 {
   position: relative;
   color: rgba(0, 0, 0, .3);
   font-size: 2em
 }
-h3::before{
+
+h3::before {
   content: attr(data-text);
   position: absolute;
   overflow: hidden;
@@ -70,8 +81,15 @@ h3::before{
   color: #3498db;
   animation: loading 13s linear;
 }
+
 @keyframes loading {
   0% {
     max-width: 0;
   }
+}
+
+#chart_container {
+  padding: 40px;
+  width: 800px;
+  
 }
